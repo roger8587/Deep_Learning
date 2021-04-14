@@ -4,7 +4,7 @@ np.random.seed(0)
 class Activator(object):
     def forward(self, weighted_input): #前向傳播計算輸出
         return 1.0 / (1.0 + np.exp(-weighted_input))
-    def backward(self, output):  #后向傳播計算導數
+    def backward(self, output):  #反向傳播計算導數
         return np.multiply(output,(1 - output))   # 對應元素相乘
         return output
 # 全連接每層的實現類。輸入對象x、神經層輸出a、輸出y均為列向量
