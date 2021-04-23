@@ -152,3 +152,5 @@ recon_x= model(fixed_x.view(-1,1,160,160))
 recon_x = invTrans(recon_x.view(1,160,160))
 save_image(recon_x.data, 'recon_image.png')
 display(Image('recon_image.png', width=160, unconfined=True))
+
+#https://arxiv.org/pdf/2008.12589.pdf
